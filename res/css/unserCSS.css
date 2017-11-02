@@ -13,3 +13,36 @@ html {
 #team img{
 	width: 6em;
 }
+
+
+
+
+.navbar{
+	background-color:#818181;
+	border:0;
+}
+.navbar-collapse{
+	border:0;
+}
+
+
+
+.navbar ul{
+	float:right;
+}
+.navbar .navbar-nav li a{
+		color:#A7E742;
+}
+.navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus{
+		color:#91C451;
+}
+.navbar-header .navbar-toggle{
+	border-color:#A7E742;
+}
+.navbar-header .navbar-toggle .icon-bar{
+	background-color:#A7E742;
+}
+.navbar-header .navbar-toggle:hover, .navbar-header .navbar-toggle:focus{
+	border-color:#91C451;
+	background-color:#888888;
+}
