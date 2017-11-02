@@ -32,23 +32,26 @@ html {
 	float:right;
 }
 .navbar .navbar-nav li a{
-		color:#A7E742;
+		color:#22E7DB;
 }
 .navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus{
-		color:#91C451;
+		color:#00659D;
 }
 .navbar-header .navbar-toggle{
-	border-color:#A7E742;
+	border-color:#22E7DB;
 }
 .navbar-header .navbar-toggle .icon-bar{
-	background-color:#A7E742;
+	background-color:#22E7DB;
 }
 .navbar-header .navbar-toggle:hover, .navbar-header .navbar-toggle:focus{
-	border-color:#91C451;
+	border-color:#00659D;
 	background-color:#888888;
 }
 
+.navbar-brand{
+	margin:0.2em;
+	padding:0;
+}
 nav img{
-	width:10%;
-	height:auto;
+	width:18%;
 }
