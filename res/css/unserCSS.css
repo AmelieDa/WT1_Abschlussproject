@@ -14,9 +14,35 @@ html {
 	width: 6em;
 }
 
-
-
-
+body{
+	margin-top: 7em;
+}
+h1{
+	font-weight:bold;
+	font-size:2em;
+	text-align:center;
+	
+}
+h2{
+	text-align:center;
+	font-weight:bold;
+	font-size:1.5em;
+}
+#info p{
+	text-align:center;
+}
+#dahinter{
+	background-image: url("../img/eruption.png");
+	width:100%;
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+#info{
+	background-color: rgba(255, 255, 255, 0.8);
+	margin: 3em 2em 2em 2em;
+	border-radius: 2.5em;
+	padding: 1.5em 1em 2em 1em;
+}
 
 .navbar{
 	background-color:#70777D;
