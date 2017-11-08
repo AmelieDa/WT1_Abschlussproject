@@ -65,6 +65,7 @@ h2{
 }
 .navbar-header .navbar-toggle{
 	border-color:#22E7DB;
+	color:#22E7DB;
 }
 .navbar-header .navbar-toggle .icon-bar{
 	background-color:#22E7DB;
@@ -72,6 +73,7 @@ h2{
 .navbar-header .navbar-toggle:hover, .navbar-header .navbar-toggle:focus{
 	border-color:#00659D;
 	background-color:#888888;
+	color:#00659D;
 }
 
 .navbar-brand{
@@ -80,4 +82,19 @@ h2{
 }
 nav img{
 	width:18%;
+}
+
+
+.team{
+	background-color:#00649C;
+}
+.team .thumbnail{
+	background-color:#6190B8;
+	border:0;
+	border-radius:5%;
+}
+.team img{
+	
+	width:30%;
+	height:auto;
 }

@@ -25,9 +25,7 @@
 		
 		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 		  </button>
 		  
 			<a class="navbar-brand" href="index.html">
@@ -50,6 +48,7 @@
 
 	
 	<main>
+		
 		<h1>Willkommen zum FH-Guide</h1>
 		
 		<div id="dahinter" class="container">
@@ -66,15 +65,40 @@
 			</div>
 		</div>
 		
-		<div id="team">
-			<h2>Das Team:</h2>
+
+		<section class="team" id="team">
+		<div class="container">
+			<h2>FH Guide Team</h2>
 			
-			<img src="res/img/handl.jpg" alt="Anja Handl">
-			<p>blablub xx irgendwas</p>
-			<img src="res/img/damisch.jpg" alt="Amelie Damisch">
-			<p>blablub xx irgendwas</p>
+			<div class="row">
+			
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="thumbnail">
+						<h3 class="text-center">Anja Handl</h3>
+						<img src="res/img/handl.jpg" alt="Anja Handl" class="img-responsive img-circle">
+						<div class="caption">
+						<p>Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.<br>Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="thumbnail">
+						<h3 class="text-center">Amelie Damisch</h3>
+						<img src="res/img/damisch.jpg" alt="Amelie Damisch" class="img-responsive img-circle">
+						<div class="caption">
+						<p>Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«.<br>Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen.</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
 		
 		</div>
+		</section>
+		
+		
+		
 	</main>
 	<!-- Bootstrap JavaScript -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
