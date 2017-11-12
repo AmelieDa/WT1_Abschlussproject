@@ -5,7 +5,9 @@
 
 html {
 	box-sizing:border-box;
+	background: linear-gradient(135deg, #cedbe9 0%,#61dce2 4%,#6199c7 12%,#46eae7 39%,#419ad6 58%,#4bb8f0 72%,#3a8bc2 90%,#26558b 100%);
 }
+
 *,::before,::after{
 	box-sizing:inherit;
 }
@@ -15,30 +17,37 @@ html {
 }
 
 body{
-	margin-top: 7em;
+	margin-top: 4em;
 }
+
 h1{
 	font-weight:bold;
-	font-size:2em;
+	font-size:3em;
 	text-align:center;
-	
+	margin-top:2em;
+	letter-spacing:1em;
+	color:#00649C;
+	font-family: Tahoma;
 }
 h2{
 	text-align:center;
 	font-weight:bold;
 	font-size:1.5em;
+	padding:0.5em;
 }
+
 #info p{
 	text-align:center;
 }
+
 #dahinter{
-	background-image: url("../img/eruption.png");
 	width:100%;
-	background-repeat: no-repeat;
-	background-size:100%;
+	background: linear-gradient(135deg, #cedbe9 0%,#61dce2 4%,#6199c7 12%,#46eae7 39%,#419ad6 58%,#4bb8f0 72%,#3a8bc2 90%,#26558b 100%);
+
 }
+
 #info{
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 	margin: 3em 2em 2em 2em;
 	border-radius: 2.5em;
 	padding: 1.5em 1em 2em 1em;
