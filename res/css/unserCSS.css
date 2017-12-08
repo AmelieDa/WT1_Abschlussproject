@@ -108,7 +108,18 @@ nav img{
 	height:auto;
 }
 video{
-	width: 100em;
-	margin-left: 20em;
+	width: 60%;
+	display: block;
+	margin: 0 auto;
 	
+}
+#goomap{
+	padding-bottom: 3em;
+	width: 100%;
+	margin: 0 auto;
+	background-color:#6190B8;
+}
+iframe{
+	display: block;
+	margin: 0 auto;
 }
