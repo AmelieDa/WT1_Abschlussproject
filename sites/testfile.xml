@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<Saalplan raum="EDVA206">
+<LVDaten>
+  <Datum>20.11.2017</Datum>
+  <Von>11:20:00</Von>
+  <Bis>12:50:00</Bis>
+  <Lektoren>Thomas Zeitlhofer</Lektoren>
+  <Gruppen>BEL-3A </Gruppen>
+  <Lehrfach>Digitale Signalverarbeitung</Lehrfach>
+  <Anmerkung></Anmerkung>
+  <StundeVon>5</StundeVon>
+  <StundeBis>6</StundeBis>
+</LVDaten>
+<LVDaten>
+  <Datum>20.11.2017</Datum>
+  <Von>17:50:00</Von>
+  <Bis>19:20:00</Bis>
+  <Lektoren>Franz Kopica</Lektoren>
+  <Gruppen>BIC-3B </Gruppen>
+  <Lehrfach>Objektorientierte Dienstentwicklung</Lehrfach>
+  <Anmerkung></Anmerkung>
+  <StundeVon>13</StundeVon>
+  <StundeBis>14</StundeBis>
+</LVDaten>
+<LVDaten>
+  <Datum>20.11.2017</Datum>
+  <Von>19:30:00</Von>
+  <Bis>21:00:00</Bis>
+  <Lektoren>Franz Kopica</Lektoren>
+  <Gruppen>BIC-3A </Gruppen>
+  <Lehrfach>Objektorientierte Dienstentwicklung</Lehrfach>
+  <Anmerkung></Anmerkung>
+  <StundeVon>15</StundeVon>
+  <StundeBis>16</StundeBis>
+</LVDaten>
+</Saalplan>

@@ -25,9 +25,12 @@ h1{
 	font-size:3em;
 	text-align:center;
 	margin-top:2em;
-	letter-spacing:1em;
+	letter-spacing: 0.2em;
 	color:#00649C;
 	font-family: Tahoma;
+}
+#tourschrift{
+	padding-bottom: 1em;
 }
 h2{
 	text-align:center;
@@ -60,8 +63,6 @@ h2{
 .navbar-collapse{
 	border:0;
 }
-
-
 
 .navbar ul{
 	float:right;
@@ -107,10 +108,12 @@ nav img{
 	width:30%;
 	height:auto;
 }
-video{
-	width: 60%;
+
+#myvid{
+	width: 65%;
 	display: block;
 	margin: 0 auto;
+	padding-bottom: 2em;
 	
 }
 #goomap{

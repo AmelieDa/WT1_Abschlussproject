@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="de">
-
+<html>
 	<head>
 		<title>FH Guide</title>
 		<link rel="icon" href="../res/img/icon.png">
@@ -9,12 +7,88 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	
-		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css">
+		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css"/>
+		<link rel="stylesheet" type="text/css" href="../res/css/barcode.css"/>
+		<link rel="stylesheet" href="../res/css/style.css" />
+		<script type="text/javascript" src="../res/js/jquery.js"></script>
+		<script type="text/javascript" src="../res/js/barcode.js"></script>
+		<!--<script type="text/javascript" src="../res/js/unserJS.js"></script>-->
+		
+		<script type="text/javascript">
+
+			var sound = new Audio("barcode.wav");
+
+			$(document).ready(function() {
+
+				barcode.config.start = 0.1;
+				barcode.config.end = 0.9;
+				barcode.config.video = '#barcodevideo';
+				barcode.config.canvas = '#barcodecanvas';
+				barcode.config.canvasg = '#barcodecanvasg';
+				barcode.setHandler(function(barcode) {
+					$('#result').html(barcode);
+				});
+				barcode.init();
+
+				$('#result').bind('DOMSubtreeModified', function(e) {
+					sound.play();	
+				});
+
+			});
+			
+			$(function() {
+				
+					$(document).ready(function(){
+
+							$.getJSON( "rooms.json", function( data ) {
+							  var items = [];
+							  $.each( data, function( key, val ) {
+								  $.each( val, function( key2, val2 ) {
+									items.push( "<li id='" + key2 + "'>" + val2 + "</li><br/>" );
+								  });
+							  });
+
+							  $( "<ul/>", {
+								"class": "my-new-list",
+								html: items.join( "" )
+							  }).appendTo( "#jsonlist" );
+			 
+							});		
+					
+					});	
+					
+					$("#testbutton").click(function(){
+						function roomData(){
+							$.ajax({
+								url: "testfile.xml",
+								dataType: "xml",
+								success:function roomfinder(data){
+											$("ul").children().remove();
+												$(data).find("LVDaten").each(function (){
+													
+													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
+													'</br>Belegt von ' + $(this).find("Von").text() +
+													'(Stunde: ' + $(this).find("StundeVon").text() +
+													') bis ' + $(this).find("Bis").text() +
+													'(Stunde: ' + $(this).find("StundeBis").text() +
+													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
+													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
+													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '</li>';
+															
+													$("ul").append(info);
+															
+												});
+										} 
+							});
+						}
+					});
+					
+			});
+		</script>
+
 	</head>
-	
 	<body>
-	
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -37,13 +111,25 @@
 					<li><a href="tour.html" >Live Tour</a></li>
 					<li><a href="#" >Raumbelegung</a></li>
 				  </ul>
-				</div><!--/.nav-collapse -->
+				</div>
 			</div>
 		</nav>
 		
-		<!-- Bootstrap JavaScript -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<div class="container-fluid">
+		<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
+		<ul id="jsonlist" class="container-fluid">
+		</ul>
+		<button id="testbutton">Get Info</button>
+		<ul id="my-list">
+		</ul>
+		</div>
+		<h3>Barcode-Scanner</h3>
+		<div id="barcode">
+			<video id="barcodevideo" autoplay></video>
+			<canvas id="barcodecanvasg" ></canvas>
+		</div>
+		<canvas id="barcodecanvas" ></canvas>
+		<div id="result"></div>
+
 	</body>
 </html>
