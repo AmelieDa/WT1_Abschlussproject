@@ -44,7 +44,7 @@
 							  var items = [];
 							  $.each( data, function( key, val ) {
 								  $.each( val, function( key2, val2 ) {
-									items.push( "<li id='" + key2 + "'>" + val2 + "</li><br/>" );
+									items.push( "<li><button id='" + key2 + "'>" + val2 + "</button></li><br/>" );
 								  });
 							  });
 
@@ -57,10 +57,9 @@
 					
 					});	
 					
-					$("#testbutton").click(function(){
-						/*function roomData(){*/
+					$("#Raum1").click(function(){
 							$.ajax({
-								url: "testfile.xml",
+								url: "edva206.xml",
 								dataType: "xml",
 								success:function (data){
 											$("#xml-list").children().remove();
@@ -68,20 +67,144 @@
 													
 													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
 													'</br>Belegt von ' + $(this).find("Von").text() +
-													'(Stunde: ' + $(this).find("StundeVon").text() +
+													' (Stunde: ' + $(this).find("StundeVon").text() +
 													') bis ' + $(this).find("Bis").text() +
-													'(Stunde: ' + $(this).find("StundeBis").text() +
+													' (Stunde: ' + $(this).find("StundeBis").text() +
 													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
 													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
 													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '</li>';
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
 															
 													$("#xml-list").append(info);
 															
 												});
 										} 
 							});
-						/*}*/
+					});
+					
+					$("#Raum2").click(function(){
+							$.ajax({
+								url: "edva207.xml",
+								dataType: "xml",
+								success:function (data){
+											$("#xml-list").children().remove();
+												$(data).find("LVDaten").each(function (){
+													
+													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
+													'</br>Belegt von ' + $(this).find("Von").text() +
+													' (Stunde: ' + $(this).find("StundeVon").text() +
+													') bis ' + $(this).find("Bis").text() +
+													' (Stunde: ' + $(this).find("StundeBis").text() +
+													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
+													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
+													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
+															
+													$("#xml-list").append(info);
+															
+												});
+										} 
+							});
+					});
+					
+					$("#Raum3").click(function(){
+							$.ajax({
+								url: "edva508.xml",
+								dataType: "xml",
+								success:function (data){
+											$("#xml-list").children().remove();
+												$(data).find("LVDaten").each(function (){
+													
+													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
+													'</br>Belegt von ' + $(this).find("Von").text() +
+													' (Stunde: ' + $(this).find("StundeVon").text() +
+													') bis ' + $(this).find("Bis").text() +
+													' (Stunde: ' + $(this).find("StundeBis").text() +
+													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
+													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
+													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
+															
+													$("#xml-list").append(info);
+															
+												});
+										} 
+							});
+					});
+					
+					$("#Raum4").click(function(){
+							$.ajax({
+								url: "edva608.xml",
+								dataType: "xml",
+								success:function (data){
+											$("#xml-list").children().remove();
+												$(data).find("LVDaten").each(function (){
+													
+													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
+													'</br>Belegt von ' + $(this).find("Von").text() +
+													' (Stunde: ' + $(this).find("StundeVon").text() +
+													') bis ' + $(this).find("Bis").text() +
+													' (Stunde: ' + $(this).find("StundeBis").text() +
+													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
+													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
+													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
+															
+													$("#xml-list").append(info);
+															
+												});
+										} 
+							});
+					});
+					
+					$("#Raum5").click(function(){
+							$.ajax({
+								url: "edva609.xml",
+								dataType: "xml",
+								success:function (data){
+											$("#xml-list").children().remove();
+												$(data).find("LVDaten").each(function (){
+													
+													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
+													'</br>Belegt von ' + $(this).find("Von").text() +
+													' (Stunde: ' + $(this).find("StundeVon").text() +
+													') bis ' + $(this).find("Bis").text() +
+													' (Stunde: ' + $(this).find("StundeBis").text() +
+													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
+													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
+													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
+															
+													$("#xml-list").append(info);
+															
+												});
+										} 
+							});
+					});
+					
+					$("#Raum6").click(function(){
+							$.ajax({
+								url: "edva610.xml",
+								dataType: "xml",
+								success:function (data){
+											$("#xml-list").children().remove();
+												$(data).find("LVDaten").each(function (){
+													
+													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
+													'</br>Belegt von ' + $(this).find("Von").text() +
+													' (Stunde: ' + $(this).find("StundeVon").text() +
+													') bis ' + $(this).find("Bis").text() +
+													' (Stunde: ' + $(this).find("StundeBis").text() +
+													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
+													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
+													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
+													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
+															
+													$("#xml-list").append(info);
+															
+												});
+										} 
+							});
 					});
 					
 			});
@@ -119,7 +242,7 @@
 		<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
 		<ul id="jsonlist" class="container-fluid">
 		</ul>
-		<button id="testbutton">Get Info</button>
+		<!--<button id="testbutton">Get Info</button>-->
 		<ul id="xml-list">
 		</ul>
 		</div>
