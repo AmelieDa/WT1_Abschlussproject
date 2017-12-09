@@ -58,12 +58,12 @@
 					});	
 					
 					$("#testbutton").click(function(){
-						function roomData(){
+						/*function roomData(){*/
 							$.ajax({
 								url: "testfile.xml",
 								dataType: "xml",
-								success:function roomfinder(data){
-											$("ul").children().remove();
+								success:function (data){
+											$("#xml-list").children().remove();
 												$(data).find("LVDaten").each(function (){
 													
 													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
@@ -76,12 +76,12 @@
 													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
 													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '</li>';
 															
-													$("ul").append(info);
+													$("#xml-list").append(info);
 															
 												});
 										} 
 							});
-						}
+						/*}*/
 					});
 					
 			});
@@ -120,7 +120,7 @@
 		<ul id="jsonlist" class="container-fluid">
 		</ul>
 		<button id="testbutton">Get Info</button>
-		<ul id="my-list">
+		<ul id="xml-list">
 		</ul>
 		</div>
 		<h3>Barcode-Scanner</h3>
