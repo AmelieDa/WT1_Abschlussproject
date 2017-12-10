@@ -12,203 +12,10 @@
 		<link rel="stylesheet" href="../res/css/style.css" />
 		<script type="text/javascript" src="../res/js/jquery.js"></script>
 		<script type="text/javascript" src="../res/js/barcode.js"></script>
-		<!--<script type="text/javascript" src="../res/js/unserJS.js"></script>-->
+		<script type="text/javascript" src="../res/js/raum.js"></script>
 		
-		<script type="text/javascript">
 
-			var sound = new Audio("barcode.wav");
 
-			$(document).ready(function() {
-
-				barcode.config.start = 0.1;
-				barcode.config.end = 0.9;
-				barcode.config.video = '#barcodevideo';
-				barcode.config.canvas = '#barcodecanvas';
-				barcode.config.canvasg = '#barcodecanvasg';
-				barcode.setHandler(function(barcode) {
-					$('#result').html(barcode);
-				});
-				barcode.init();
-
-				$('#result').bind('DOMSubtreeModified', function(e) {
-					sound.play();	
-				});
-
-			});
-			
-			$(function() {
-				
-					$(document).ready(function(){
-
-							$.getJSON( "rooms.json", function( data ) {
-							  var items = [];
-							  $.each( data, function( key, val ) {
-								  $.each( val, function( key2, val2 ) {
-									items.push( "<li><button id='" + key2 + "'>" + val2 + "</button></li><br/>" );
-								  });
-							  });
-
-							  $( "<ul/>", {
-								"class": "my-new-list",
-								html: items.join( "" )
-							  }).appendTo( "#jsonlist" );
-			 
-							});		
-					
-					});	
-					
-					$("#Raum1").click(function(){
-							$.ajax({
-								url: "edva206.xml",
-								dataType: "xml",
-								success:function (data){
-											$("#xml-list").children().remove();
-												$(data).find("LVDaten").each(function (){
-													
-													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
-													'</br>Belegt von ' + $(this).find("Von").text() +
-													' (Stunde: ' + $(this).find("StundeVon").text() +
-													') bis ' + $(this).find("Bis").text() +
-													' (Stunde: ' + $(this).find("StundeBis").text() +
-													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
-													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
-													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
-															
-													$("#xml-list").append(info);
-															
-												});
-										} 
-							});
-					});
-					
-					$("#Raum2").click(function(){
-							$.ajax({
-								url: "edva207.xml",
-								dataType: "xml",
-								success:function (data){
-											$("#xml-list").children().remove();
-												$(data).find("LVDaten").each(function (){
-													
-													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
-													'</br>Belegt von ' + $(this).find("Von").text() +
-													' (Stunde: ' + $(this).find("StundeVon").text() +
-													') bis ' + $(this).find("Bis").text() +
-													' (Stunde: ' + $(this).find("StundeBis").text() +
-													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
-													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
-													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
-															
-													$("#xml-list").append(info);
-															
-												});
-										} 
-							});
-					});
-					
-					$("#Raum3").click(function(){
-							$.ajax({
-								url: "edva508.xml",
-								dataType: "xml",
-								success:function (data){
-											$("#xml-list").children().remove();
-												$(data).find("LVDaten").each(function (){
-													
-													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
-													'</br>Belegt von ' + $(this).find("Von").text() +
-													' (Stunde: ' + $(this).find("StundeVon").text() +
-													') bis ' + $(this).find("Bis").text() +
-													' (Stunde: ' + $(this).find("StundeBis").text() +
-													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
-													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
-													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
-															
-													$("#xml-list").append(info);
-															
-												});
-										} 
-							});
-					});
-					
-					$("#Raum4").click(function(){
-							$.ajax({
-								url: "edva608.xml",
-								dataType: "xml",
-								success:function (data){
-											$("#xml-list").children().remove();
-												$(data).find("LVDaten").each(function (){
-													
-													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
-													'</br>Belegt von ' + $(this).find("Von").text() +
-													' (Stunde: ' + $(this).find("StundeVon").text() +
-													') bis ' + $(this).find("Bis").text() +
-													' (Stunde: ' + $(this).find("StundeBis").text() +
-													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
-													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
-													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
-															
-													$("#xml-list").append(info);
-															
-												});
-										} 
-							});
-					});
-					
-					$("#Raum5").click(function(){
-							$.ajax({
-								url: "edva609.xml",
-								dataType: "xml",
-								success:function (data){
-											$("#xml-list").children().remove();
-												$(data).find("LVDaten").each(function (){
-													
-													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
-													'</br>Belegt von ' + $(this).find("Von").text() +
-													' (Stunde: ' + $(this).find("StundeVon").text() +
-													') bis ' + $(this).find("Bis").text() +
-													' (Stunde: ' + $(this).find("StundeBis").text() +
-													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
-													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
-													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
-															
-													$("#xml-list").append(info);
-															
-												});
-										} 
-							});
-					});
-					
-					$("#Raum6").click(function(){
-							$.ajax({
-								url: "edva610.xml",
-								dataType: "xml",
-								success:function (data){
-											$("#xml-list").children().remove();
-												$(data).find("LVDaten").each(function (){
-													
-													var info = '<li>Datum: ' + $(this).find("Datum").text() + 
-													'</br>Belegt von ' + $(this).find("Von").text() +
-													' (Stunde: ' + $(this).find("StundeVon").text() +
-													') bis ' + $(this).find("Bis").text() +
-													' (Stunde: ' + $(this).find("StundeBis").text() +
-													')<br/>Lektoren: ' + $(this).find("Lektoren").text() +
-													'<br/>Gruppen: ' + $(this).find("Gruppen").text() +
-													'<br/>Lehrfach: ' + $(this).find("Lehrfach").text() +
-													'<br/>Eventuelle Anmerkungen: ' + $(this).find("Anmerkung").text() + '<br/><br/></li>';
-															
-													$("#xml-list").append(info);
-															
-												});
-										} 
-							});
-					});
-					
-			});
-		</script>
 
 	</head>
 	<body>
@@ -218,7 +25,9 @@
 				
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
 				  </button>
 				  
 					<a class="navbar-brand" href="../index.html">
@@ -240,11 +49,13 @@
 		
 		<div class="container-fluid">
 		<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
-		<ul id="jsonlist" class="container-fluid">
-		</ul>
-		<!--<button id="testbutton">Get Info</button>-->
-		<ul id="xml-list">
-		</ul>
+		<span id="jsonlist"> 		</span>
+		<button id="xmlbtn">Rauminformation</button>
+		
+		<br><br>
+		
+		<table id="xml-list">
+		</table>
 		</div>
 		<h3>Barcode-Scanner</h3>
 		<div id="barcode">

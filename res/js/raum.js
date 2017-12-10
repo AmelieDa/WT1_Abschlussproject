@@ -23,7 +23,7 @@
 				
 				$(document).ready(function(){
 
-						$.getJSON( "rooms.json", function( data ) {
+						$.getJSON( "../res/json/rooms.json", function( data ) {
 						  var items = [];
 						  $.each( data, function( key, val ) {
 							  $.each( val, function( key2, val2 ) {
@@ -59,22 +59,22 @@
 					var whatRoom;
 					
 					if (selectedRoom == "Raum1"){
-						whatRoom = "edva206.xml";
+						whatRoom = "../res/xml/edva206.xml";
 					}
 					else if (selectedRoom == "Raum2"){
-						whatRoom = "edva207.xml";
+						whatRoom = "../res/xml/edva207.xml";
 					}
 					else if (selectedRoom == "Raum3"){
-						whatRoom = "edva508.xml";
+						whatRoom = "../res/xml/edva508.xml";
 					}
 					else if (selectedRoom == "Raum4"){
-						whatRoom = "edva608.xml";
+						whatRoom = "../res/xml/edva608.xml";
 					}
 					else if (selectedRoom == "Raum5"){
-						whatRoom = "edva609.xml";
+						whatRoom = "../res/xml/edva609.xml";
 					}
 					else if (selectedRoom == "Raum6"){
-						whatRoom = "edva610.xml";
+						whatRoom = "../res/xml/edva610.xml";
 					}
 					
 					$.ajax({

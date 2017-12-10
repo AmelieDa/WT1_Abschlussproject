@@ -129,12 +129,17 @@ iframe{
 
 /*------------------------------Foto Galerie------------------------------------*/
 
+.gallery{
+	text-align: center;
+}
+
 .fancy{
 	padding: 0.8em;
 	display: inline-block;
 	height: auto;
 	max-width: 100%;
 	vertical-align: middle;
+	text-align: center;
 }
 
 /*------------------------------Raumbelegung------------------------------------*/
