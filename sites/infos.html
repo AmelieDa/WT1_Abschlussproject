@@ -10,13 +10,14 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	
-		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css"></head>
-		
-		<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
-		<link rel="stylesheet" type="text/css" href="../res/css/WOWengine1.css" />
-		<script type="text/javascript" src="../res/js/WOWjquery.js"></script>
-		<!-- End WOWSlider.com HEAD section -->
+		<!-- jQuery library ----------> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Fancybox -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.js" ></script>
 
+		<!-- Eigenes CSS -->
+		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css"></head>
 </head>
 <body>
 
@@ -27,7 +28,9 @@
 		
 		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			<span class="sr-only">Toggle navigation</span>
-			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
 		  </button>
 		  
 			<a class="navbar-brand" href="index.html">
@@ -55,32 +58,29 @@
 	<div class="container dahinter">
 			<h2>FH Gallerie</h2>
 		
-		<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
-		<div id="wowslider-container1">
-		<div class="ws_images"><ul>
-			<li><img src="../res/img/gallery/bild1.jpg" alt="FH Technikum Wien Hauptstandort" title="FH Technikum Wien Hauptstandort" id="wows1_0"/></li>
-			<li><img src="../res/img/gallery/bild2.jpg" alt="Hörsal A1.05" title="Hörsal A1.05" id="wows1_1"/></li>
-			<li><img src="../res/img/gallery/bild3.jpg" alt="Hörsaal A1.05" title="Hörsaal A1.05" id="wows1_2"/></li>
-			<li><img src="../res/img/gallery/bild4.jpg" alt="EDV-Raum A2.07" title="EDV-Raum A2.07" id="wows1_3"/></li>
-			<li><img src="../res/img/gallery/bild5.jpg" alt="slideshow html code" title="Hörsaal F2.01" id="wows1_4"/></li>
-			<li><img src="../res/img/gallery/bild6.jpg" alt="Übungsraum A1.06" title="Übungsraum A1.06" id="wows1_5"/></li>
-		</ul></div>
-		<div class="ws_thumbs">
-		<div>
-				<a href="#" title="FH Technikum Wien Hauptstandort"><img src="../res/img/gallery/thumbnails/bild1.jpg" alt="" /></a>
-				<a href="#" title="Hörsal A1.05"><img src="../res/img/gallery/thumbnails/bild2.jpg" alt="" /></a>
-				<a href="#" title="Hörsaal A1.05"><img src="../res/img/gallery/thumbnails/bild3.jpg" alt="" /></a>
-				<a href="#" title="EDV-Raum A2.07"><img src="../res/img/gallery/thumbnails/bild4.jpg" alt="" /></a>
-				<a href="#" title="Hörsaal F2.01"><img src="../res/img/gallery/thumbnails/bild5.jpg" alt="" /></a>
-				<a href="#" title="Übungsraum A1.06"><img src="../res/img/gallery/thumbnails/bild6.jpg" alt="" /></a>
+			<div class="container">
+			 
+  
+  
+				<a href="../res/img/gallery/bild1.jpg" data-fancybox="group" data-caption="FH Technikum Wien Hauptstandort">
+					<img src="../res/img/gallery/thumbnails/bild1.jpg" alt="FH Technikum Wien Hauptstandort" class="fancy img-responsive" />
+				</a>
+				<a href="../res/img/gallery/bild2.jpg" data-fancybox="group" data-caption="Hörsal A1.05">
+					<img src="../res/img/gallery/thumbnails/bild2.jpg" alt="Hörsal A1.05" class="fancy img-responsive" />
+				</a>
+				<a href="../res/img/gallery/bild3.jpg" data-fancybox="group" data-caption="Hörsaal A1.05">
+					<img src="../res/img/gallery/thumbnails/bild3.jpg" alt="Hörsaal A1.05" class="fancy" />
+				</a>
+				<a href="../res/img/gallery/bild4.jpg" data-fancybox="group" data-caption="EDV-Raum A2.07">
+					<img src="../res/img/gallery/thumbnails/bild4.jpg" alt="EDV-Raum A2.07" class="fancy" />
+				</a>
+				<a href="../res/img/gallery/bild5.jpg" data-fancybox="group" data-caption="Hörsaal F2.01">
+					<img src="../res/img/gallery/thumbnails/bild5.jpg" alt="Hörsaal F2.01" class="fancy" />
+				</a>
+				<a href="../res/img/gallery/bild6.jpg" data-fancybox="group" data-caption="Übungsraum A1.06">
+					<img src="../res/img/gallery/thumbnails/bild6.jpg" alt="Übungsraum A1.06" class="fancy" />
+				</a>	
 			</div>
-		</div>
-		<div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery carousel</a> by WOWSlider.com v8.8</div>
-		<div class="ws_shadow"></div>
-		</div>	
-		<script type="text/javascript" src="../res/js/wowslider.js"></script>
-		<script type="text/javascript" src="../res/js/WOWscript.js"></script>
-		<!-- End WOWSlider.com BODY section -->
 	
 	</div>
 	</section>

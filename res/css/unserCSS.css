@@ -126,3 +126,14 @@ iframe{
 	display: block;
 	margin: 0 auto;
 }
+
+/*------------------------------Foto Galerie------------------------------------*/
+
+.fancy{
+	padding: 0.8em;
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
