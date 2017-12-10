@@ -1,4 +1,4 @@
-			var sound = new Audio("barcode.wav");
+			/*var sound = new Audio("../res/vid/barcode.wav");
 
 			$(document).ready(function() {
 
@@ -16,7 +16,7 @@
 					sound.play();	
 				});
 
-			});
+			});*/
 					
 //------------------------JSON--------------------------			
 $(function() {
@@ -117,7 +117,7 @@ $(function() {
 		
 		
 		var chosenOne = document.getElementById('theChosenOne').value;	//finde eingegebenen Raumnamen
-				var validation = 0;
+		var validation = 0;
 		var thatRoom;
 		
 		if (chosenOne == "Raum1"){

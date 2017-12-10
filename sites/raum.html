@@ -23,12 +23,12 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 				
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-				  </button>
+					</button>
 				  
 					<a class="navbar-brand" href="../index.html">
 						<img alt="FH Guide Logo" src="../res/img/logo1.png" class="logo">
@@ -48,24 +48,24 @@
 		</nav>
 		
 		<div class="container-fluid">
-		<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
-		<span id="jsonlist"> 		</span>
-		<button id="xmlbtn">Rauminformation</button>
-		<button id="clear">Zu viel Information!</button>
-		<br><br>
-		<form>
-			<div class="input-group">
-			  <span class="input-group-addon">Raum:</span>
-			  <input type="text" class="form-control" id="theChosenOne">
-			  <button id="checkEingabe" class="form-control">check</button>
-			</div>
+			<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
+			<span id="jsonlist"> 		</span>
+			<button id="xmlbtn">Rauminformation</button>
+			<button id="clear">Zu viel Information!</button>
+			<br><br>
+			<form>
+				<div class="input-group">
+				  <span class="input-group-addon">Raum:</span>
+				  <input type="text" class="form-control" id="theChosenOne">
+				  <button id="checkEingabe" class="form-control">Check</button>
+				</div>
+				
+			</form>
 			
-		</form>
-		
-		<br><br>
-		
-		<table id="xml-list">
-		</table>
+			<br/><br/>
+			
+			<table id="xml-list">
+			</table>
 		</div>
 		<h3>Barcode-Scanner</h3>
 		<div id="barcode">
@@ -74,6 +74,9 @@
 		</div>
 		<canvas id="barcodecanvas" ></canvas>
 		<div id="result"></div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 	</body>
 </html>

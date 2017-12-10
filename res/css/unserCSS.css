@@ -29,9 +29,7 @@ h1{
 	color:#00649C;
 	font-family: Tahoma;
 }
-#tourschrift{
-	padding-bottom: 1em;
-}
+
 h2{
 	text-align:center;
 	font-weight:bold;
@@ -109,24 +107,6 @@ nav img{
 	height:auto;
 }
 
-#myvid{
-	width: 65%;
-	display: block;
-	margin: 0 auto;
-	padding-bottom: 2em;
-	
-}
-#goomap{
-	padding-bottom: 3em;
-	width: 100%;
-	margin: 0 auto;
-	background-color:#6190B8;
-}
-iframe{
-	display: block;
-	margin: 0 auto;
-}
-
 /*------------------------------Foto Galerie------------------------------------*/
 
 .gallery{
@@ -141,7 +121,28 @@ iframe{
 	vertical-align: middle;
 	text-align: center;
 }
+#goomap{
+	padding-bottom: 3em;
+	width: 100%;
+	margin: 0 auto;
+	background-color:#6190B8;
+}
+iframe{
+	display: block;
+	margin: 0 auto;
+}
+/*------------------------------Video-LiveTour------------------------------------*/
 
+#myvid{
+	width: 65%;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 2em;
+	
+}
+#tourschrift{
+	padding-bottom: 1em;
+}
 /*------------------------------Raumbelegung------------------------------------*/
 
 th, td{
@@ -151,4 +152,15 @@ th, td{
 
 form{
 	width:250px;
+}
+button{
+	padding:0.3em;
+	margin: 0.2em;
+	background-color:#6190B8;
+	font-weight: bold;
+	border-color: #22E7DB;
+}
+button:hover{
+	background-color:#6190DA;
+	color: #EEE;
 }
