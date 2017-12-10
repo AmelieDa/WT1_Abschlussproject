@@ -137,3 +137,9 @@ iframe{
 	vertical-align: middle;
 }
 
+/*------------------------------Raumbelegung------------------------------------*/
+
+th, td{
+	border: 1px solid #000000;
+	padding: 0.2em;
+}
