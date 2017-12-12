@@ -8,10 +8,8 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css"/>
-		<link rel="stylesheet" type="text/css" href="../res/css/barcode.css"/>
 		<link rel="stylesheet" href="../res/css/style.css" />
 		<script type="text/javascript" src="../res/js/jquery.js"></script>
-		<script type="text/javascript" src="../res/js/barcode.js"></script>
 		<script type="text/javascript" src="../res/js/raum.js"></script>
 		
 
@@ -53,13 +51,12 @@
 			<button id="xmlbtn">Rauminformation</button>
 			<button id="clear">Zu viel Information!</button>
 			<br><br>
-			<form>
+			<form onsubmit="return false;">
 				<div class="input-group">
 				  <span class="input-group-addon">Raum:</span>
 				  <input type="text" class="form-control" id="theChosenOne">
-				  <button id="checkEingabe" class="form-control">Check</button>
+				  <button id="checkEingabe" class="form-control">check</button>
 				</div>
-				
 			</form>
 			
 			<br/><br/>
@@ -67,13 +64,8 @@
 			<table id="xml-list">
 			</table>
 		</div>
-		<h3>Barcode-Scanner</h3>
-		<div id="barcode">
-			<video id="barcodevideo" autoplay></video>
-			<canvas id="barcodecanvasg" ></canvas>
-		</div>
-		<canvas id="barcodecanvas" ></canvas>
-		<div id="result"></div>
+		<h3>QR Code Scanner</h3>
+		
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
