@@ -3,26 +3,21 @@
 //------------------------JSON--------------------------			
 $(function() {
 				
-	//bp: ist dasselbe wie oben (shorthand), also doppelte ready-function, siehe auch:
-	//https://learn.jquery.com/using-jquery-core/document-ready/
-	//$(document).ready(function(){
-
-			$.getJSON( "rooms.json", function( data ) {				
-			  var items = [];
-			  $.each( data, function( key, val ) {
-				  $.each( val, function( key2, val2 ) {
-					items.push( "<option value='" + key2 + "'>" + val2 +  "</option>" );
-				  });
-			  });
-			
-			  $( "<select/>", {
-				"id": "room",
-				html: items.join( "" )
-			  }).appendTo( "#jsonlist" );
-
-			});		
+	$.getJSON( "../res/json/rooms.json", function( data ) {				
+	  var items = [];
+	  $.each( data, function( key, val ) {
+		  $.each( val, function( key2, val2 ) {
+			items.push( "<option value='" + key2 + "'>" + val2 +  "</option>" );
+		  });
+	  });
 	
-	//});	
+	  $( "<select/>", {
+		"id": "room",
+		html: items.join( "" )
+	  }).appendTo( "#jsonlist" );
+
+	});		
+		
 				
 					
 //------------------------XML--------------------------
@@ -31,14 +26,12 @@ $(function() {
 	$("#clear").click(function(){
 		$("#xml-list").children().remove();		//vorhandene Daten löschen
 	});
+	
 	$("#xmlbtn").click(function(){
 			
 			var selectedRoom = $('#room').val();	//finde in JSON gewählten Raum	
 
-			//bp: laden d. xml-files in eigene methode ausgelagert
-			//diese wird nun bei auswahl d. selects wie auch text-eingabe ausgeführt
-			loadXMLRoomData(selectedRoom);
-			
+			loadXMLRoomData(selectedRoom);		//xml-files in eigene methode ausgelagert			
 		});	
 
 					
@@ -59,7 +52,7 @@ $(function() {
 });
 
 function loadXMLRoomData(r){
-	console.log("Gewählter Raum: "+r);
+	//console.log("Gewählter Raum: "+r);
 	var raum = r;
 	
 	$("#xml-list").children().remove();		//vorhandene Daten löschen
@@ -70,22 +63,22 @@ function loadXMLRoomData(r){
 	var whatRoom;
 			
 			if (raum == "Raum1"){
-				whatRoom = "edva206.xml";
+				whatRoom = "../res/xml/edva206.xml";
 			}
 			else if (raum == "Raum2"){
-				whatRoom = "edva207.xml";
+				whatRoom = "../res/xml/edva207.xml";
 			}
 			else if (raum == "Raum3"){
-				whatRoom = "edva508.xml";
+				whatRoom = "../res/xml/edva508.xml";
 			}
 			else if (raum == "Raum4"){
-				whatRoom = "edva608.xml";
+				whatRoom = "../res/xml/edva608.xml";
 			}
 			else if (raum == "Raum5"){
-				whatRoom = "edva609.xml";
+				whatRoom = "../res/xml/edva609.xml";
 			}
 			else if (raum == "Raum6"){
-				whatRoom = "edva610.xml";
+				whatRoom = "../res/xml/edva610.xml";
 			}
 			
 			$.ajax({
