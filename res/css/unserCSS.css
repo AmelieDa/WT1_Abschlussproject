@@ -167,3 +167,8 @@ button:hover{
 input{
 	width: 8em;
 }
+
+form{
+	display: block;
+	margin: 0 auto;
+}
