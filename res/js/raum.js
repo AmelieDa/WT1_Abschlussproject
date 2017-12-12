@@ -54,7 +54,7 @@ function loadXMLRoomData(r){
 	
 	$("#xml-list").children().remove();		//vorhandene Daten löschen
 			
-	var tablehead = '<tr><th>Datum</th> <th>Belegt von (Stunde)</th> <th>bis (Stunde)</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkungen</th></tr>'
+	var tablehead = '<tr><th>Datum</th> <th>von (Stunde)</th> <th>bis (Stunde)</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkungen</th></tr>'
 	$("#xml-list").append(tablehead);			//Tabellenüberschriften
 			
 	var whatRoom;
