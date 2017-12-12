@@ -164,3 +164,6 @@ button:hover{
 	background-color:#6190DA;
 	color: #EEE;
 }
+input{
+	width: 8em;
+}
