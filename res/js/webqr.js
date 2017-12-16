@@ -108,6 +108,8 @@ function read(a)
         html+="<a target='_blank' href='"+a+"'>"+a+"</a><br>";
     html+="<b>"+htmlEntities(a)+"</b><br><br>";
     document.getElementById("result").innerHTML=html; //result mit qrcode ergebnis
+	
+	//XML
 	var raum = htmlEntities(a);
 	
 	$("#xml-list").children().remove();		//vorhandene Daten löschen

@@ -1,3 +1,4 @@
+/*------------------------------Allgemein------------------------------------*/
 *{
 	padding:0;
 	margin:0;
@@ -5,7 +6,7 @@
 
 html {
 	box-sizing:border-box;
-	background: #FFFFFF;/*linear-gradient(135deg, #cedbe9 0%,#61dce2 4%,#6199c7 12%,#46eae7 39%,#419ad6 58%,#4bb8f0 72%,#3a8bc2 90%,#26558b 100%);*/
+	background: #FFFFFF;
 }
 
 *,::before,::after{

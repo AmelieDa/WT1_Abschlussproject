@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css"/>
 		<link rel="stylesheet" href="../res/css/qrcode.css" />
+		<!-- jQuery -->
 		<script type="text/javascript" src="../res/js/jquery.js"></script>
 		<script type="text/javascript" src="../res/js/raum.js"></script>
 		<!-- QR Code JS -->
@@ -32,6 +33,8 @@
 
 	</head>
 	<body>
+	
+		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -62,12 +65,14 @@
 		
 		<div class="container-fluid">
 			<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
+			<!-- Raumsuche via JSON -->
 			<div class="center">
-			<span id="jsonlist"> 		</span>
-			<button id="xmlbtn">Rauminfo</button>
-			<button id="clear">Clear</button>
+				<span id="jsonlist"> 		</span>
+				<button id="xmlbtn">Rauminfo</button>
+				<button id="clear">Clear</button>
 			</div>
-			<br><br>
+			<br/><br/>
+			<!-- Raumsuche via Formular -->
 			<form onsubmit="return false;">
 				<div class="input-group">
 				  <span class="input-group-addon">Raum:</span>
@@ -75,8 +80,8 @@
 				  <button id="checkEingabe" class="form-control">check</button>
 				</div>
 			</form>
-			
 			<br/><br/>
+			<!-- Raumsuche via QR Code -->
 			<div id="main">
 				<div id="headerqr">
 					<div style="position:relative;top:+20px;left:0px;"><g:plusone size="medium"></g:plusone></div>
@@ -117,6 +122,8 @@
 			<canvas id="qr-canvas" width="800" height="600"></canvas>
 			<script type="text/javascript">load();</script>
 		</div>	
+		
+		<!-- Bootstrap Javascript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 

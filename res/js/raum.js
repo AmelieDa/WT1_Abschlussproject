@@ -49,7 +49,7 @@ $(function() {
 });
 
 function loadXMLRoomData(r){
-	//console.log("Gewählter Raum: "+r);
+
 	var raum = r;
 	
 	$("#xml-list").children().remove();		//vorhandene Daten löschen

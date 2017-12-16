@@ -1,6 +1,7 @@
-	
+
 	$(function() {
 		
+			//JSON
 			$(document).ready(function(){
 
 					$.getJSON( "../json/rooms.json", function( data ) {
@@ -20,6 +21,7 @@
 			
 			});
 			
+			//XML
 			function roomData(){
 					$.ajax({
 						url: "edva206.xml",
