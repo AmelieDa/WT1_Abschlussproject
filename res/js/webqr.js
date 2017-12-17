@@ -114,28 +114,28 @@ function read(a)
 	
 	$("#xml-list").children().remove();		//vorhandene Daten löschen
 			
-	var tablehead = '<tr><th>Datum</th> <th>von (Stunde)</th> <th>bis (Stunde)</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkungen</th></tr>'
+	var tablehead = '<caption id="gewRaum">' + raum + '</caption><tr><th>Datum</th> <th>von (Stunde)</th> <th>bis (Stunde)</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkungen</th></tr>'
 	$("#xml-list").append(tablehead);			//Tabellenüberschriften
 			
 	var whatRoom;
 			
-			if (raum == "Raum1" || raum == "EDV_A2.06" || raum == "EDVA206"){
-				whatRoom = "../res/xml/edva206.xml";
+			if (raum == "Raum1" || raum == "EDV_A2.06" || raum == "EDVA206"){			// "../res/xml/" funktioniert nicht, warum auch immer
+				whatRoom = "edva206.xml";
 			}
 			else if (raum == "Raum2" || raum == "EDV_A2.07" || raum == "EDVA207"){
-				whatRoom = "../res/xml/edva207.xml";
+				whatRoom = "edva207.xml";
 			}
 			else if (raum == "Raum3" || raum == "EDV_A5.08" || raum == "EDVA508"){
-				whatRoom = "../res/xml/edva508.xml";
+				whatRoom = "edva508.xml";
 			}
 			else if (raum == "Raum4" || raum == "EDV_A6.08" || raum == "EDVA608"){
-				whatRoom = "../res/xml/edva608.xml";
+				whatRoom = "edva608.xml";
 			}
 			else if (raum == "Raum5" || raum == "EDV_A6.09" || raum == "EDVA609"){
-				whatRoom = "../res/xml/edva609.xml";
+				whatRoom = "xml/edva609.xml";
 			}
 			else if (raum == "Raum6" || raum == "EDV_A6.10" || raum == "EDVA610"){
-				whatRoom = "../res/xml/edva610.xml";
+				whatRoom = "xml/edva610.xml";
 			}
 			else{
 				alert("Verzeihung. Diesen Raum kennen wir nicht!");

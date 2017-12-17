@@ -7,7 +7,7 @@ $(function() {
 	  var items = [];
 	  $.each( data, function( key, val ) {
 		  $.each( val, function( key2, val2 ) {
-			items.push( "<option value='" + key2 + "'>" + val2 +  "</option>" );
+			items.push( "<option value='" + val2 + "'>" + val2 +  "</option>" );
 		  });
 	  });
 	
@@ -54,7 +54,7 @@ function loadXMLRoomData(r){
 	
 	$("#xml-list").children().remove();		//vorhandene Daten löschen
 			
-	var tablehead = '<tr><th>Datum</th> <th>von (Stunde)</th> <th>bis (Stunde)</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkungen</th></tr>'
+	var tablehead = '<caption id="gewRaum">' + raum + '</caption><tr><th>Datum</th> <th>von (Stunde)</th> <th>bis (Stunde)</th> <th>Lektoren</th> <th>Gruppen</th> <th>Lehrfach</th> <th>Anmerkungen</th></tr>'
 	$("#xml-list").append(tablehead);			//Tabellenüberschriften
 			
 	var whatRoom;
@@ -109,4 +109,7 @@ function loadXMLRoomData(r){
 			
 
 }
+
+
+
 

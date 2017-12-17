@@ -199,8 +199,9 @@ button{
 button:hover{
 	color: #00659D;
 }
-input{
-	width: 8em;
+
+#gewRaum{
+	font-weight: bold;
 }
 
 .center{
