@@ -21,39 +21,37 @@ body{
 	margin-top: 4em;
 }
 
+
 h1{
 	font-weight:bold;
-	font-size:3em;
+	font-size:2.4em;
 	text-align:center;
-	margin-top:2em;
-	letter-spacing: 0.2em;
+	margin-top:60px;			/*Abstand damit Überschrift nicht unter Navigationsbar verschwindet*/
+	letter-spacing: 0.1em;
 	color:#00649C;
 	font-family: Tahoma;
 }
+@media (min-width:768px) { 		/*	h1 auf großen Bildschirmen	*/
+	h1{
+	font-weight:bold;
+	font-size:3em;
+	text-align:center;
+	margin-top:60px;
+	letter-spacing: 0.2em;
+	color:#00649C;
+	font-family: Tahoma;
+	}
+}
 
 h2{
-	text-align:center;
-	font-weight:bold;
-	font-size:1.5em;
-	padding:0.5em;
+		text-align:center;
+		font-weight:bold;
+		font-size:1.5em;
+		padding:0.5em;
 }
+	
 
-#info p{
-	text-align:center;
-}
-
-.dahinter{
-	width:100%;
-	background: linear-gradient(135deg, #cedbe9 0%,#61dce2 4%,#6199c7 12%,#46eae7 39%,#419ad6 58%,#4bb8f0 72%,#3a8bc2 90%,#26558b 100%);
-
-}
-
-#info{
-	background-color: rgba(255, 255, 255, 0.5);
-	margin: 3em 2em 2em 2em;
-	border-radius: 2.5em;
-	padding: 1.5em 1em 2em 1em;
-}
+/*------------------------------Navigation------------------------------------*/
 
 .navbar{
 	background-color:#6190B8;
@@ -94,6 +92,35 @@ nav img{
 }
 
 
+/*------------------------------Startseite------------------------------------*/
+
+
+#info p{
+	text-align:center;
+}
+
+.dahinter{
+	width:100%;
+	background: linear-gradient(135deg, #cedbe9 0%,#61dce2 4%,#6199c7 12%,#46eae7 39%,#419ad6 58%,#4bb8f0 72%,#3a8bc2 90%,#26558b 100%);
+
+}
+
+#info{
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: 0.2em;
+	border-radius: 2.5em;
+	padding: 1em;
+}
+@media (min-width:768px) { 
+	#info{
+		background-color: rgba(255, 255, 255, 0.5);
+		margin: 3em 2em 2em 2em;
+		border-radius: 2.5em;
+		padding: 1.5em 1em 2em 1em;
+	}
+}
+
+
 .team{
 	background-color:#00649C;
 }
@@ -110,7 +137,7 @@ nav img{
 
 /*------------------------------Foto Galerie------------------------------------*/
 
-.gallery{
+.gallery, .map{
 	text-align: center;
 }
 
@@ -122,6 +149,7 @@ nav img{
 	vertical-align: middle;
 	text-align: center;
 }
+/*------------------------------Google Maps------------------------------------*/
 #goomap{
 	padding-bottom: 3em;
 	width: 100%;
@@ -131,6 +159,9 @@ nav img{
 iframe{
 	display: block;
 	margin: 0 auto;
+	border: 0;
+	width: 80%;
+	height: 400px;
 }
 /*------------------------------Video-LiveTour------------------------------------*/
 
@@ -148,30 +179,28 @@ iframe{
 
 th, td{
 	border: 1px solid #000000;
+	border-color:#00659D;
 	padding: 0.2em;
 }
 
 form{
-	width:250px;
+	width:50%;
+	display: block;
+	margin: 0 auto;
 }
 button{
 	padding:0.3em;
-	margin: 0.2em;
-	background-color:#6190B8;
+	margin: 0;
+	background-color:#FFFFFF;
 	font-weight: bold;
-	border-color: #22E7DB;
+	border-color: #00659D;
+	border-radius:5%;
 }
 button:hover{
-	background-color:#6190DA;
-	color: #EEE;
+	color: #00659D;
 }
 input{
 	width: 8em;
-}
-
-form{
-	display: block;
-	margin: 0 auto;
 }
 
 .center{

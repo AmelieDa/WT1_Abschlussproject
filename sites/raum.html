@@ -9,17 +9,18 @@
 		<meta name="robots" content="none">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- eigene CSS -->
 		<link rel="stylesheet" type="text/css" href="../res/css/unserCSS.css"/>
-		<link rel="stylesheet" href="../res/css/qrcode.css" />
+		<link rel="stylesheet" href="../res/css/unserqrcode.css" />
 		<!-- jQuery -->
-		<script type="text/javascript" src="../res/js/jquery.js"></script>
-		<script type="text/javascript" src="../res/js/raum.js"></script>
+		<script src="../res/js/jquery.js"></script>
+		<script src="../res/js/raum.js"></script>
 		<!-- QR Code JS -->
-		<script type="text/javascript" src="../res/js/llqrcode.js"></script>
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-		<script type="text/javascript" src="../res/js/webqr.js"></script>
+		<script src="../res/js/llqrcode.js"></script>
+		<script src="https://apis.google.com/js/plusone.js"></script>
+		<script src="../res/js/webqr.js"></script>
 		
-		<script type="text/javascript">
+		<script>
 
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-24451557-1']);
@@ -66,15 +67,20 @@
 		</nav>
 		
 		<div class="container-fluid">
+			
+			<h1>Raumbelegung</h1>
+		
 			<h2>EDV-Räume im Bauteil A der FH-Technikum Wien: </h2>
-			<!-- Raumsuche via JSON -->
+			
+		<!-- Raumsuche via JSON -->
 			<div class="center">
 				<span id="jsonlist"> 		</span>
 				<button id="xmlbtn">Rauminfo</button>
 				<button id="clear">Clear</button>
 			</div>
 			<br/><br/>
-			<!-- Raumsuche via Formular -->
+			
+		<!-- Raumsuche via Formular -->
 			<form onsubmit="return false;">
 				<div class="input-group">
 				  <span class="input-group-addon">Raum:</span>
@@ -83,47 +89,43 @@
 				</div>
 			</form>
 			<br/><br/>
-			<!-- Raumsuche via QR Code -->
-			<div id="main">
-				<div id="headerqr">
-					<div style="position:relative;top:+20px;left:0px;"><g:plusone size="medium"></g:plusone></div>
-					<p id="mp1">QR Code Scanner</p>
-				</div>
-				<div id="mainbody">
-					<table class="tsel" border="0" width="100%">
-						<tr>
-						<td valign="top" align="center" width="50%">
-						<table class="tsel" border="0">
-							<tr>
-							<td><img class="selector" id="webcamimg" src="../res/img/vid.png" onclick="setwebcam()" align="left" /></td>
-							<td><img class="selector" id="qrimg" src="../res/img/cam.png" onclick="setimg()" align="right"/></td></tr>
-							<tr><td colspan="2" align="center">
-							<div id="outdiv">
-							</div></td></tr>
-						</table>
-						</td>
-						</tr>
-						<tr><td colspan="3" align="center">
+			
+		<!-- Raumsuche via QR Code -->
+			<h2>QR Code Scanner</h2>
+			
+			<table class="qr-table">
+				<tr>
+					<td>
+					<button  class="selector" id="webcamimg" onclick="setwebcam()"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span></button>
+					</td>
+					<td>
+					<button  class="selector" id="qrimg" onclick="setimg()"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="tablecol">
+						<div id="outdiv"></div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="tablecol">
 						<div id="result"></div>
-						</td></tr>
-					</table>
-					<table id="xml-list">
-					</table>
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- webqr_2016 -->
-					<ins class="adsbygoogle"
-						 style="display:block"
-						 data-ad-client="ca-pub-8418802408648518"
-						 data-ad-slot="2527990541"
-						 data-ad-format="auto"></ins>
-					<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-				</div>&nbsp;
-			</div>
-			<canvas id="qr-canvas" width="800" height="600"></canvas>
-			<script type="text/javascript">load();</script>
+					</td>
+				</tr>
+				
+			</table>
+				
+			<canvas id="qr-canvas"></canvas>
+			<script>load();</script>	
+			
+		<br/>
+		<br/>
+		<!-- XML Ausgabe -->		
+			<table id="xml-list">
+			</table>
 		</div>	
+		
+		<br/>
 		
 		<!-- Bootstrap Javascript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
