@@ -1,0 +1,7 @@
+# robots.txt erzeugt durch googleseo.de
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /res/xml
+Disallow: /res/json
+Sitemap: res/xml/sitemap.xml
