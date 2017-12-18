@@ -156,12 +156,11 @@ nav img{
 	margin: 0 auto;
 	background-color:#6190B8;
 }
+
 iframe{
-	display: block;
-	margin: 0 auto;
-	border: 0;
-	width: 880px; 
-	height: 400px;
+		display: block;
+		margin: 0 auto;
+		border: 0;
 }
 /*------------------------------Video-LiveTour------------------------------------*/
 
