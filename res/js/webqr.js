@@ -132,10 +132,10 @@ function read(a)
 				whatRoom = "edva608.xml";
 			}
 			else if (raum == "Raum5" || raum == "EDV_A6.09" || raum == "EDVA609"){
-				whatRoom = "xml/edva609.xml";
+				whatRoom = "edva609.xml";
 			}
 			else if (raum == "Raum6" || raum == "EDV_A6.10" || raum == "EDVA610"){
-				whatRoom = "xml/edva610.xml";
+				whatRoom = "edva610.xml";
 			}
 			else{
 				alert("Verzeihung. Diesen Raum kennen wir nicht!");
